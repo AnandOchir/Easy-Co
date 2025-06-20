@@ -1,0 +1,42 @@
+# Source files (since we ship the compiled dist folder)
+src/
+tsconfig.json
+
+# Development files
+.gitignore
+nodemon.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Development dependencies cache
+node_modules/.cache/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+tests/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# Development tools
+.eslintrc*
+.prettierrc*
+
+# Lock files (optional - some prefer to include them)
+# bun.lock
+# package-lock.json
+# yarn.lock
+
