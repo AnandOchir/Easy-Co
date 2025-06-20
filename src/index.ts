@@ -9,6 +9,7 @@ import { table } from 'table';
 import 'colors';
 import { spawn, exec } from 'child_process';
 import inquirer from 'inquirer';
+import shell from 'shelljs';
 
 const program = new Command();
 
@@ -70,21 +71,7 @@ const openFilePicker = (): Promise<string> => {
     
     exec(`osascript -e '${script}'`, (error, stdout) => {
       if (error) {
-        console.error('File picker error:', error);
-        const altScript = `tell application "System Events" to choose file with prompt "Select PEM file"`;
-        exec(`osascript -e '${altScript}'`, (altError, altStdout) => {
-          if (altError) {
-            console.error('Alternative file picker also failed:', altError);
-            reject(altError);
-            return;
-          }
-          const filePath = altStdout.trim();
-          if (filePath) {
-            resolve(filePath);
-          } else {
-            reject(new Error('No file selected'));
-          }
-        });
+        console.error('No file selected'.red);
         return;
       }
       const filePath = stdout.trim();
@@ -299,6 +286,8 @@ program
       console.log('Use "eco ls" to see available connections.'.yellow);
       return;
     }
+
+    shell.chmod('400', connection.pemFilePath);
 
     const sshProcess = spawn('ssh', ['-t', '-i', connection.pemFilePath, `ec2-user@${connection.ip}`], {
       stdio: 'inherit',

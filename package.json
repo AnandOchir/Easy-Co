@@ -1,6 +1,6 @@
 {
   "name": "easy-co",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "main": "dist/index.js",
   "bin": {
     "eco": "dist/index.js"
@@ -25,12 +25,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anand-ochiruranchimeg/easy-co.git"
+    "url": "git+https://github.com/AnandOchir/Easy-Co.git"
   },
   "bugs": {
-    "url": "https://github.com/anand-ochiruranchimeg/easy-co/issues"
+    "url": "https://github.com/AnandOchir/Easy-Co/issues"
   },
-  "homepage": "https://github.com/anand-ochiruranchimeg/easy-co#readme",
+  "homepage": "https://github.com/AnandOchir/Easy-Co#readme",
   "dependencies": {
     "@types/inquirer": "^9.0.8",
     "colors": "^1.4.0",
