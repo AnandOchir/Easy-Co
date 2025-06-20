@@ -47,6 +47,8 @@ Add a new EC2 connection interactively. The command will prompt you for:
 eco add
 ```
 
+![Add Connection Demo](gifs/add.gif)
+
 ### `eco ls [options]`
 List all saved connections
 
@@ -58,6 +60,8 @@ eco ls                    # Display as table
 eco ls --format json      # Display as JSON
 ```
 
+![List Connections Demo](gifs/ls.gif)
+
 ### `eco con <id>`
 Connect to an EC2 instance by connection ID
 
@@ -65,12 +69,16 @@ Connect to an EC2 instance by connection ID
 eco con 0    # Connect to connection with ID 0
 ```
 
+![Connect Demo](gifs/connect.gif)
+
 ### `eco remove <id>`
 Remove a connection by ID
 
 ```bash
 eco remove 0    # Remove connection with ID 0
 ```
+
+![Remove Connection Demo](gifs/remove.gif)
 
 ### `eco --help`
 Show help information
